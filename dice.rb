@@ -6,11 +6,19 @@ def roll_the_dice
   end
 end
 
-puts "How many dice?"
+puts "Сколько кубиков бросить?"
 num = gets.chomp.to_i
 
 roll_the_dice
 puts "Кубики выпали!"
+
+sum = 0
 num.times do
-  puts rand(6) + 1
+  a = rand(6) + 1
+  puts a
+  sleep 0.1
+
+  sum += a
 end
+
+puts "Сумма кубиков: #{sum.to_s}"
